@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>hell</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery.js"></script>
+    <style>
+      body {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image:url(5.jpeg) ;
+        background-size:cover;
+        background-position: center;
+      }
+
+      #form {
+        background: transparent;
+        color: white;
+        width: 219px;
+        height: 200px;
+        margin:100px auto;
+      }
+
+      label{
+        margin:20px;
+        font-size:25px;
+      }
+      input {
+        color:white;
+        border:2px solid white;
+        outline:none;
+        background: transparent;
+        margin:20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        height: 20px;
+      }
+      #submit {
+        float: right;
+      }
+
+      h1 {
+        color: white;
+      }
+      #id {
+        display: none;
+      }
+      #para {
+        position: absolute;
+        top: 150px;
+        left: 32px;
+        height: 450px;
+        width:202px ;
+      }
+      span {
+        text-transform: capitalize;
+      }
+      #op {
+        opacity: 0.4;
+      }
+      #op:hover{
+        opacity: 1;
+      }
+      
+    </style>
+  </head>
+<body>
+<div id="form">
+  <h1 style="margin: 20px;">LOGIN</h1>
+  <div id="op"><label  for="Email" id="nam">Name</label><br>
+  <input  type="text" placeholder="Name" id="email"><br>
+  <input type="submit" id="submit"></input></div>
+</div>
+<div id="id">
+  <img src="2.jpeg" alt="EID MUBARAK" style="height:100%;width: 100%;">
+  <div id="para">
+    <h1 style="color:#E1A759;">EID MUBARAK</h1>
+    <p style="color:#E1A759;"><span id="name"></span>In every smile and laughter ; In every silent prayer answered; In every opportunity that knocks your door – May Allah bless you! May this pious day brings you immense joy, happiness, peace and prosperity. Eid Mubarak! May Allah gifts you lots of happiness, love and wisdom.</p>
+  </div>
+
+
+</div>
+<script>
+  var text = $("#emial").val();
+  var missing ="";
+  $("#submit").click(function(){
+    if($("#email").val()==""){
+      missing += "Abey name apna lihk";
+      alert(missing);
+    }else {
+      document.getElementById("form").style.display="none";
+      document.getElementById("id").style.display="block";
+      document.getElementById("name").innerHTML=$("#email").val()+" "+",";
+    }
+  });
+</script>
+</body>
+</html>
